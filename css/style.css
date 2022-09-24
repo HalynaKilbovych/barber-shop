@@ -72,6 +72,8 @@ img {
 
   background-color: transparent;
   text-transform: uppercase;
+
+  cursor: pointer;
 }
 .btn:hover {
   background-color: var(--accent-colour);
@@ -88,7 +90,7 @@ img {
 .header {
   background: #6D707B
 }
-.header-conteiner {
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -99,8 +101,10 @@ img {
   display: flex;
   column-gap: var(--gap);
 }
-.header-list-item {
-  padding: 20px 0;
+.header-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .header-list-item,
 .header-phone,
@@ -120,7 +124,10 @@ img {
 }
 /* ---------------------------HERO--------------------------- */
 .hero {
-    background-color: #6D707B;
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../img/header-backround.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1600px;
 }
 .hero-contact-item {
     font-weight: 600;
