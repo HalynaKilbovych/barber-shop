@@ -1,0 +1,46 @@
+//   @include flex (flex, center, space-between, null );
+@mixin flex($d:flex, $ai:center, $jc:center, $g:30px) {
+    display: $d;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $g;
+  }
+
+@mixin fonts($fw:500, $fs, $lh:24px, $ls:0.03em) { 
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+  
+@mixin miniMobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

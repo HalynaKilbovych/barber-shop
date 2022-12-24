@@ -1,0 +1,22 @@
+.gallery { 
+    &__pre-title {
+        margin-bottom: 71px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+    }
+    &__item {
+        @include tablet {
+            flex-basis: calc((100% - var(--gap)) / 2);
+        }
+        
+        @include desktop {
+            flex-basis: calc((100% - (var(--gap) * 3)) / 4);
+        }
+    }
+    &__card-img {
+        width: 100%;
+    }
+}

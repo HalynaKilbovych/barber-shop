@@ -1,0 +1,94 @@
+.benefits {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    
+        @include desktop {
+            flex-direction: row-reverse;
+            gap: var(--gap);
+        }
+    }
+    &__content {
+        @include tablet {
+            width: 500px;
+        }
+    }
+    &__pre-title {
+        @include desktop {
+            margin-top: 9px;
+        }
+    }
+    &__title {
+        @include fonts (700, 42px, 49px, 0.05em);
+        color: var(--titleColor);
+        margin-bottom: var(--gap);
+    
+        @include miniMobile {
+            font-size: 8.75vw;
+        }
+    
+        @include tablet {
+            width: 450px;
+        }
+    }
+    &__after-title {
+        @include fonts (400, 18px, 30px, 0.02em);
+        margin-bottom: 44px;
+        color: var(--primaryTextColor);
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    
+        @include tablet {
+            width: 450px;
+            margin-left: auto;
+        }
+        
+        @include desktop {
+            width: calc((100% - var(--gap))/2);
+            margin-left: 0;
+            padding: 0 100px;
+        }
+    }
+    &__item {
+        @include flex (flex, center, space-between, null );
+        flex-direction: column;
+        width: calc((100% - var(--gap))/2);
+        height: 133px;
+        background-color: #F7F7F7;
+        padding: 20px 35px;
+    
+        &:nth-child(even) {
+            margin-top: var(--gap);
+        }
+        
+        &:nth-child(odd) {
+            margin-right: var(--gap);
+        }
+    }
+    &__item-top {
+        display: flex;
+        span {
+            @include fonts (700, 42px, 57px, 0.05em);
+            color: var(--titleColor);
+    
+            @include miniMobile {
+                font-size: 8.75vw;
+            }
+            }
+    
+        sup {
+            @include fonts (600, 16px, 22px, 0.05em);
+            color: var(--accentColor);
+            max-width: 12px;
+            margin: 15px 0 0 3px;
+        }
+    }
+    &__item-text {
+        @include fonts (600, 11px, 15px, 0);
+        color: var(--titleColor);
+        text-align: center;
+    }
+    
+}

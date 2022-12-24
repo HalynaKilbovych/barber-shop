@@ -1,0 +1,43 @@
+.contact-wrapper {
+    background-color: #191C26;
+    background-image: url('../img/contact-bg-mob.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    margin: 0 auto;
+    max-width: 480px;
+    
+    @media (min-resolution: 192dpi) {
+        background-image: url('../img/contact-bg-mob-2x.png');
+    }
+
+    @include tablet {
+        max-width: 768px;
+        background-image: url('../img/contact-bg-tab.png');
+        background-size: 100%;
+
+        @media (min-resolution: 192dpi) {
+            background-image: url('../img/contact-bg-mob-2x.png');
+        }
+    }
+
+    @include desktop {
+        max-width: 1600px;
+        background-position: right;
+        background-size: calc((100% - var(--gap)) / 2) 100%;
+
+        background-image: url('../img/contact-bg-pc.png');
+
+        @media (min-resolution: 192dpi) {
+            background-image: url('../img/contact-bg-pc-2x.png');
+        }
+    }
+
+    &__container {
+        @include desktop {
+            display: flex;
+            gap: var(--gap);
+            }
+    
+    }
+}

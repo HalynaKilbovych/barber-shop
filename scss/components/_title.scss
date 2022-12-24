@@ -1,0 +1,28 @@
+.title { 
+    font-family: 'Raleway';
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+}
+.pre-title {
+    @include fonts (600, 11px, 15px, 0.1em);
+    text-transform: uppercase;
+    @include flex (flex, center, null, null );
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: currentColor;
+    }
+}
+
+.pre-title--light {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title--dark {
+    color: #303030;
+}

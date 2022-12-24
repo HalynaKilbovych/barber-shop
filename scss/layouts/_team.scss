@@ -1,0 +1,66 @@
+.team {
+    background-color: #F7F7F7;
+    max-width: 480px;
+
+    @include tablet {
+        max-width: 768px;
+    }
+
+    @include desktop {
+        max-width: 1600px;
+    }
+    &__container{
+        @include tablet {
+            padding: 0 159px;
+        }
+    
+        @include desktop {
+            padding: 0 15px;
+        }
+    }
+    &__title {
+        @include fonts (700, 42px, 49px, 0.05em);
+        color: var(--titleColor);
+        margin-bottom: 44px;
+    
+        @include miniMobile {
+            font-size: 8.75vw;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 64px;
+    
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: var(--gap);
+        }
+    }
+    &__item {
+        @include desktop {
+            width: calc((100% - (var(--gap) * 2)) / 3);
+        }
+    }
+    &__card-img {
+        margin-bottom: var(--gap);
+        width: 100%;
+    }
+    &__description {
+        @include flex;
+        flex-direction: column;
+    }
+    &__sub-title {
+        @include fonts (400, 18px, 25px, 0.02em);
+        color: var(--titleColor);
+        font-family: "Open Sans",sans-serif;
+        margin-bottom: 8px;
+    }
+    &__text {
+        @include fonts (400, 14px, 19px, 0.02em);
+        color: var(--accentColor);
+        margin-bottom: var(--gap);
+    }
+}

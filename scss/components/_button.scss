@@ -1,0 +1,27 @@
+.content-btn {
+  @include fonts (600, 12px, 16px, 0.09em);
+  text-transform: uppercase;
+  border-color: var(--accentColor);
+  border-radius: 25px;
+  min-width: 160px;
+  background-color: transparent;
+  color: var(--secondaryTitleColor);
+  padding: 12px;
+  cursor: pointer;
+  transition: color var(--duration) var(--transition),
+      background-color var(--duration) var(--transition);
+  @include flex;
+
+  &:hover,
+  &:focus {
+      background-color: var(--accentColor);
+      color: var(--secondaryTitleColor);
+    }
+  }
+.content-btn--light {
+    color: var(--secondaryTitleColor);
+}
+
+.content-btn--dark {
+    color: #303030;
+}

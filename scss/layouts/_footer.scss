@@ -1,0 +1,38 @@
+.footer { 
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 44px;
+        padding-bottom: 44px;
+    
+        @include tablet {
+            padding-top: 56px;
+            padding-bottom: 56px;
+        }
+    }     
+    &__copyright {
+        @include fonts (600, 11px, 15px, 0.02em);
+        display: block;
+        color: var(--secondaryTextColor);
+        
+    }
+    &__soc-list {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 40px;
+        @include fonts (600, 11px, 15px, 0.02em);
+        color: var(--titleColor);
+    
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    
+        &:before {
+            content: "";
+            width: 60px;
+            height: 1px;
+            background-color: var(--titleColor);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.social__list {
+    @include flex (flex, center, space-between, 10px );
+    color: var(--titleColor); 
+}
+
+.social__link {
+    @include flex (flex, center, center, null );
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    fill: currentColor;
+}

@@ -1,0 +1,93 @@
+.services {
+    max-width: 480px;
+    background: url("../img/services-bg.png") center no-repeat, var(--backgroundColorServices);
+    background-size: cover;
+
+    @media (min-resolution: 192dpi) {
+        background: url("../img/services-bg-2x.png") center no-repeat, var(--backgroundColorServices);
+    }
+
+    @include tablet {
+        max-width: 768px;
+        background: url('../img/services-bg-tab.png') center no-repeat, var(--backgroundColorServices);
+
+        @media (min-resolution: 192dpi) {
+            background: url('../img/services-bg-tab-2x.png') center no-repeat, var(--backgroundColorServices);
+        }
+    }
+
+    @include desktop {
+        max-width: 1600px;
+        background: url('../img/services-bg-pc.png') center no-repeat, var(--backgroundColorServices);
+
+        @media (min-resolution: 192dpi) {
+            background: url('../img/services-bg-pc-2x.png') center no-repeat, var(--backgroundColorServices);
+        }
+    }
+    &__title {
+        @include fonts (700, 40px, 47px, 0.05em);
+        color: var(--secondaryTitleColor);
+        margin-bottom: 44px;
+    
+        @include miniMobile {
+            font-size: 8.33vw;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 44px;
+        background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+        padding: 30px 20px 30px 40px;
+    
+        @include tablet {
+            padding: 32px 40px;
+        }
+    
+        @include desktop {
+            flex-direction: row;
+            gap: var(--gap);
+            background: none;
+            padding: 0;
+        }
+    }
+    &__table {
+        @include desktop {
+            width: calc((100% - var(--gap)) / 2);
+            background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+            padding: 30px 21px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__item {
+        display: flex;
+        align-items: baseline;
+    }
+    &__line {
+        height: 1px;
+        background-color: rgba(157, 164, 189, 0.12);
+        flex-grow: 1;
+        margin: 0 4px 0 4px;
+    }
+    &__text,
+    &__price-text {
+        @include fonts (400, 14px, 20px, 0.02em);
+        color: var(--secondaryTextColor);
+
+        @include miniMobile {
+            font-size: 2.92vw;
+        }
+
+        @include tablet {
+            @include fonts (400, 18px, 30px, 0.02em);
+        }
+    }
+    &__btn {
+        margin: 0 auto;
+    }
+}

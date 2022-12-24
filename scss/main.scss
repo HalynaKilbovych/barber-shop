@@ -1,0 +1,23 @@
+@import "./base/reset";
+@import "./base/units";
+@import "./base/mixin";
+@import "./base/vars";
+
+@import "./components/container-section"; 
+@import "./components/button"; 
+@import "./components/title"; 
+@import "./components/social-media-list";
+@import "./components/backdrop-modal";
+
+@import "./layouts/header";
+@import "./layouts/hero"; 
+@import "./layouts/about";
+@import "./layouts/services-prices";
+@import "./layouts/benefits";
+@import "./layouts/team"; 
+@import "./layouts/gallery";
+@import "./layouts/contact-wrapper"; 
+@import "./layouts/online-booking"; 
+@import "./layouts/contact";
+@import "./layouts/footer";
+
